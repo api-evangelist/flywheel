@@ -1,0 +1,25 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/Developer_Guides/api_sdk/
+docs: https://docs.flywheel.io/Developer_Guides/api_sdk/
+notes: >-
+  Flywheel authenticates API/SDK/CLI access with a per-user API key. The key is
+  of the form <hostname>:<key> and is generated from the user profile in the
+  Flywheel web UI. No public OpenAPI is available (the API is per-instance), so
+  this profile is captured from the developer documentation rather than derived.
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: FlywheelApiKey
+    type: apiKey
+    in: header
+    key_name: Authorization
+    format: '<hostname>:<key>'
+    obtained_from: User profile in the Flywheel web application
+    used_by:
+      - flywheel-sdk (Python) — flywheel.Client('<api-key>')
+      - flywheel-cli — fw login <api-key>
+      - fw-client HTTP client
+    sources: [docs.flywheel.io/Developer_Guides/api_sdk/]
