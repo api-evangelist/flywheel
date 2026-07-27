@@ -1,0 +1,53 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/user/navigate/user_the_flywheel_hierarchy/
+docs: https://docs.flywheel.io/user/navigate/user_the_flywheel_hierarchy/
+notes: >-
+  Flywheel enforces a fixed container hierarchy for all research data. Captured
+  from the Flywheel hierarchy documentation. Derived from docs (no public
+  OpenAPI); relationships reflect the documented strict parent-child structure.
+entities:
+  - name: Group
+    description: Top-level organizational container; owns one or more Projects.
+  - name: Project
+    description: A research project within a Group; contains Subjects.
+  - name: Subject
+    description: A study participant/subject within a Project; contains Sessions.
+  - name: Session
+    description: A single imaging session/visit for a Subject; contains Acquisitions.
+  - name: Acquisition
+    description: One imaging series/sequence within a Session; holds image Files.
+  - name: File
+    description: A data file (DICOM, NIfTI, etc.) attached to a container.
+  - name: Analysis
+    description: Outputs and inputs of a gear run, attachable to Sessions/Acquisitions/Projects.
+  - name: Gear
+    description: A ready-to-run plug-in application (classification, QA, conversion, pipelines).
+relationships:
+  - from: Group
+    to: Project
+    type: has_many
+  - from: Project
+    to: Subject
+    type: has_many
+    via: parent
+  - from: Subject
+    to: Session
+    type: has_many
+    via: parent
+  - from: Session
+    to: Acquisition
+    type: has_many
+    via: parent
+  - from: Acquisition
+    to: File
+    type: has_many
+  - from: Session
+    to: Analysis
+    type: has_many
+  - from: Analysis
+    to: Gear
+    type: belongs_to
+    via: gear
+constraints:
+  - A Group cannot directly parent an Acquisition; the full chain Project > Subject > Session must exist.

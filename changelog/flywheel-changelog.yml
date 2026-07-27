@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/release/
+scheme: platform-release
+current: '22.2'
+docs: https://docs.flywheel.io/release/
+notes: >-
+  Flywheel publishes dated release notes per Core version. The releases index
+  lists current versions Core 22.2 down to 20.0 and archives 19.5 back to 14.x.
+  Per-version release notes enumerate features, bug fixes, and deprecations.
+  Recent-window summary below; the live releases page is the source of truth.
+entries:
+  - version: '22.2'
+    status: current
+    highlights:
+      - Latest Flywheel Core platform release.
+      - flywheel-sdk 22.2.x tracks this API tag.
+  - version: '22.0'
+    status: released
+    highlights:
+      - Announced deprecation of the Legacy Usage Report API.
+      - Continued deprecation of the Flywheel MATLAB SDK (EOL 2026-08-30).
+  - version: '21.x'
+    status: released
+    highlights:
+      - SDK releases 21.1.0 through 21.6.1 published to PyPI.
+      - Multiple legacy viewer and API deprecations.

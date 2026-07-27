@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+host: https://flywheel.io
+notes: >-
+  Probed the marketing/docs host on 2026-07-19. No /.well-known discovery
+  documents are published. The Flywheel REST API is served per customer instance
+  (<instance>/api) behind authentication and its Swagger UI lives at
+  <instance>/api/docs — not reachable at a public host — so no well-known
+  documents were harvested. Absence recorded as valid data.
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404

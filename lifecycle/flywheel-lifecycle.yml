@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/release/
+versioning:
+  scheme: platform-release
+  current: '22.2'
+  note: >-
+    Flywheel Core platform is versioned by release train (current Core 22.2). The
+    Python SDK version tracks the platform API tag (current flywheel-sdk 22.2.2);
+    the REST API is documented per instance via Swagger at <instance>/api/docs.
+  releases_docs: https://docs.flywheel.io/release/
+deprecation:
+  policy_docs: https://docs.flywheel.io/release/
+  deprecations:
+    - name: Flywheel MATLAB SDK
+      eol: '2026-08-30'
+      note: Deprecated; use the Python SDK from MATLAB via the py. interface.
+    - name: Legacy Usage Report API
+      note: Deprecated in favor of the current usage reporting surface.
+    - name: Legacy viewers and API endpoints
+      note: Multiple legacy viewer and API deprecations announced across recent releases.
+sla:
+  note: Enterprise SLAs are contractual (per customer instance); no public SLA page found.
+status_page:
+  note: >-
+    No public status page found (status.flywheel.io does not resolve). Platform
+    availability is managed per customer instance.

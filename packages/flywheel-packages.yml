@@ -1,0 +1,102 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/user/flywheel-io/
+notes: >-
+  First-party client libraries and the Developer Toolkit published by the
+  flywheel-io organization on PyPI. Versions captured from the PyPI JSON API on
+  2026-07-19. Flywheel ships no npm/Maven/NuGet/Go/RubyGems/crates first-party
+  client (the REST API is consumed via the Python SDK, the fw HTTP client, and
+  per-instance Swagger).
+packages:
+  - language: python
+    registry: pypi
+    name: flywheel-sdk
+    version: 22.2.2
+    url: https://pypi.org/project/flywheel-sdk/
+    install: pip install flywheel-sdk
+    official: true
+    role: sdk
+    description: >-
+      Official Flywheel Python SDK — Swagger-generated programmatic access to all
+      Flywheel REST API endpoints, with FlyQL advanced search.
+  - language: python
+    registry: pypi
+    name: flywheel-cli
+    version: 18.5.1
+    url: https://pypi.org/project/flywheel-cli/
+    install: pip install flywheel-cli
+    official: true
+    role: cli
+    description: The Flywheel command line interface (fw) — auth, ingest, export, jobs.
+  - language: python
+    registry: pypi
+    name: fw-client
+    version: 2.3.1
+    url: https://pypi.org/project/fw-client/
+    install: pip install fw-client
+    official: true
+    role: http-client
+    description: Robust HTTP client for the Flywheel API (Developer Toolkit).
+  - language: python
+    registry: pypi
+    name: fw-file
+    version: 4.2.3
+    url: https://pypi.org/project/fw-file/
+    install: pip install fw-file
+    official: true
+    role: library
+    description: Unified interface for working with medical imaging file formats (Developer Toolkit).
+  - language: python
+    registry: pypi
+    name: fw-gear
+    version: 0.3.7
+    url: https://pypi.org/project/fw-gear/
+    install: pip install fw-gear
+    official: true
+    role: library
+    description: Toolkit for developing Flywheel Gears (Developer Toolkit).
+  - language: python
+    registry: pypi
+    name: fw-curation
+    version: 1.0.3
+    url: https://pypi.org/project/fw-curation/
+    install: pip install fw-curation
+    official: true
+    role: library
+    description: Library for simplifying bulk curation tasks (Developer Toolkit).
+  - language: python
+    registry: pypi
+    name: fw-classification
+    version: 0.6.2
+    url: https://pypi.org/project/fw-classification/
+    install: pip install fw-classification
+    official: true
+    role: library
+    description: Library for classifying medical imaging data (Developer Toolkit).
+  - language: python
+    registry: pypi
+    name: flywheel-gear-toolkit
+    version: 0.6.22
+    url: https://pypi.org/project/flywheel-gear-toolkit/
+    install: pip install flywheel-gear-toolkit
+    official: true
+    role: library
+    description: Flywheel Gear Development Toolkit for building analysis gears.
+  - language: python
+    registry: pypi
+    name: flywheel-bids
+    version: 1.2.34
+    url: https://pypi.org/project/flywheel-bids/
+    install: pip install flywheel-bids
+    official: true
+    role: library
+    description: BIDS (Brain Imaging Data Structure) curation and export for Flywheel.
+deprecated:
+  - language: matlab
+    name: Flywheel MATLAB SDK
+    official: true
+    status: deprecated
+    eol: '2026-08-30'
+    note: >-
+      Deprecated; end-of-life 2026-08-30. Flywheel recommends calling the Python
+      SDK from MATLAB via the built-in py. interface.

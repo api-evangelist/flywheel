@@ -1,7 +1,30 @@
 aid: flywheel
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flywheel.png
 name: Flywheel
-description: Flywheel is a company surfaced as a portfolio company of 8vc and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Flywheel is a medical imaging data management and AI development platform for
+  biomedical research, clinical trials, and medical device R&D. It securely
+  ingests, organizes, de-identifies, processes, and analyzes imaging data (DICOM,
+  NIfTI, and more) in a strict container hierarchy (Group, Project, Subject,
+  Session, Acquisition, File, Analysis) and automates workflows with reusable
+  plug-in applications called Gears. Developers integrate through a per-instance
+  REST API documented with Swagger, an official Python SDK, a command line
+  interface, and an open-source Developer Toolkit (fw-client, fw-file, fw-gear,
+  fw-curation, fw-classification). Flywheel is HIPAA, SOC 2/SOC 3, GDPR, and
+  21 CFR Part 11 compliant. Surfaced as an 8vc portfolio company and enriched by
+  the API Evangelist pipeline.
 url: https://raw.githubusercontent.com/api-evangelist/flywheel/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,15 +34,96 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Medical Imaging
+- Healthcare
+- Data Management
+- Machine Learning
+- Research
+- DICOM
+- Life Sciences
+apis:
+- name: Flywheel Core API
+  description: >-
+    Full REST API for the Flywheel platform, covering the container hierarchy
+    (groups, projects, subjects, sessions, acquisitions, files, analyses), gears
+    and jobs, users and permissions, and search. Documented with Swagger and
+    served per customer instance at <instance>/api (interactive docs at
+    <instance>/api/docs). Consumed via the official Python SDK and CLI.
+  humanURL: https://docs.flywheel.io/Developer_Guides/api_sdk/
+  baseURL: https://api-docs.flywheel.io/latest/index.html
+  x-baseurl-note: >-
+    The live API base is per-instance (<instance>/api); the public reference is
+    the generated SDK/API documentation host. No single public production base
+    URL is published.
+  tags:
+  - Medical Imaging
+  - REST
+  properties:
+  - type: APIReference
+    url: https://api-docs.flywheel.io/latest/index.html
+  - type: Documentation
+    url: https://docs.flywheel.io/Developer_Guides/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://docs.flywheel.io/Developer_Guides/
+- type: Documentation
+  url: https://docs.flywheel.io/Developer_Guides/
+- type: APIReference
+  url: https://api-docs.flywheel.io/latest/index.html
+- type: GettingStarted
+  url: https://api-docs.flywheel.io/latest/tags/16.19.2/python/getting_started_new.html
+- type: Authentication
+  url: authentication/flywheel-authentication.yml
+- type: Packages
+  url: packages/flywheel-packages.yml
+- type: SDKs
+  url: packages/flywheel-packages.yml
+- type: CLI
+  url: cli/flywheel-cli.yml
+- type: DataModel
+  url: data-model/flywheel-data-model.yml
+- type: Conventions
+  url: conventions/flywheel-conventions.yml
+- type: Lifecycle
+  url: lifecycle/flywheel-lifecycle.yml
+- type: Deprecation
+  url: lifecycle/flywheel-lifecycle.yml
+- type: ChangeLog
+  url: changelog/flywheel-changelog.yml
+- type: Conformance
+  url: conformance/flywheel-conformance.yml
+- type: Compliance
+  url: https://flywheel.io/compliance/
+- type: TrustCenter
+  url: security/flywheel-trust-center.yml
+- type: DomainSecurity
+  url: security/flywheel-domain-security.yml
+- type: WellKnown
+  url: well-known/flywheel-well-known.yml
+- type: LLMsTxt
+  url: llms/flywheel-llms.txt
+- type: Support
+  url: https://forum.flywheel.io
+- type: Blog
+  url: https://flywheel.io/insights/
+- type: GitHubOrganization
+  url: https://github.com/flywheel-io
+- type: PrivacyPolicy
+  url: https://flywheel.io/privacy-policy/
+- type: TermsOfService
+  url: https://flywheel.io/terms/
 - type: Website
   url: https://flywheel.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://flywheel.io/compliance/
+docs: https://flywheel.io/compliance/
+notes: >-
+  Flywheel is a medical imaging data management platform; its conformance surface
+  is regulatory/compliance rather than API-protocol standards. Claims captured
+  from flywheel.io compliance and product pages. No public OpenAPI is available
+  (the REST API is per-instance), so protocol conformance is not derivable.
+standards:
+  - id: hipaa
+    conforms: true
+    evidence: flywheel.io publishes HIPAA compliance for protected health information (medical imaging).
+  - id: soc2
+    conforms: true
+    evidence: Flywheel is a SOC 2 certified organization (security, availability, processing integrity, confidentiality, privacy).
+  - id: soc3
+    conforms: true
+    evidence: Flywheel publishes SOC 3 compliance alongside SOC 2.
+  - id: gdpr
+    conforms: true
+    evidence: flywheel.io states GDPR compliance with role-based access control.
+  - id: 21-cfr-part-11
+    conforms: true
+    evidence: Supports FDA 21 CFR Part 11 (audit/change logging, digital signatures, approval workflows) for regulated submissions.
+  - id: irb
+    conforms: true
+    evidence: Enables Institutional Review Board (IRB) compliant research workflows.

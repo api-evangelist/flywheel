@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/Developer_Guides/
+docs: https://docs.flywheel.io/Developer_Guides/
+notes: >-
+  Cross-cutting request/response semantics for the Flywheel REST API, captured
+  from the developer documentation and SDK behavior. The API is per-instance
+  (<instance>/api) with Swagger at <instance>/api/docs; no public OpenAPI is
+  available to derive from, so unstated conventions are recorded as unknown
+  rather than inferred.
+authentication:
+  style: api-key
+  ref: authentication/flywheel-authentication.yml
+search:
+  language: FlyQL
+  note: Advanced structured search over the container hierarchy, exposed via the Python SDK.
+hierarchy:
+  ref: data-model/flywheel-data-model.yml
+  note: >-
+    All resources live under a fixed container hierarchy
+    (Group > Project > Subject > Session > Acquisition > File/Analysis).
+pagination:
+  note: Container listing endpoints support paging; exact params not documented publicly.
+idempotency:
+  supported: unknown
+  note: No documented idempotency-key contract found in public developer docs.
+versioning:
+  ref: lifecycle/flywheel-lifecycle.yml
+  note: Platform release-train versioning; SDK version tracks the API tag.
+error_envelope:
+  note: Errors returned as JSON with HTTP status codes; no public RFC 9457 problem+json contract documented.
+rate_limiting:
+  note: Not publicly documented (enterprise/per-instance).

@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: searched
+probe: true
+source: https://flywheel.io/compliance/
+url: https://flywheel.io/compliance/
+certifications:
+- HIPAA
+- SOC 2
+- SOC 3
+- GDPR
+- 21 CFR Part 11
+- IRB
+notes: >-
+  Compliance page verified by probe (HIPAA, GDPR keywords). SOC 2, SOC 3,
+  21 CFR Part 11, and IRB support confirmed from flywheel.io product/compliance
+  content and the Teleport case study on Flywheel's SOC 2 posture. Note:
+  getflywheel.com (WP Engine hosting) is a DIFFERENT company and was excluded.
+evidence:
+- source: https://flywheel.io/compliance/
+  keywords:
+  - hipaa
+  - gdpr
+- source: https://flywheel.io/insights/blog/ensuring-data-security-accessibility-biomedical-research
+  keywords:
+  - soc 2
+  - soc 3
+  - 21 cfr part 11

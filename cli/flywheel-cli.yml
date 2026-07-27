@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.flywheel.io/CLI/
+name: Flywheel CLI (fw)
+binary: fw
+package: packages/flywheel-packages.yml#flywheel-cli
+docs: https://docs.flywheel.io/CLI/
+description: >-
+  The Flywheel command line interface (fw) authenticates against a Flywheel
+  instance with an API key and moves data and jobs in and out of the platform.
+  Distributed as the flywheel-cli package on PyPI.
+install:
+  - method: pip
+    command: pip install flywheel-cli
+auth:
+  style: api-key
+  command: fw login <api-key>
+  note: The API key is of the form <hostname>:<key>, obtained from the user profile.
+command_groups:
+  - group: login / logout / status
+    purpose: Authenticate the CLI against a Flywheel instance and inspect the active session.
+  - group: ingest
+    purpose: Bulk-import data (DICOM, folder, project, template) into the Flywheel hierarchy.
+  - group: export
+    purpose: Export sessions/acquisitions/files back out of Flywheel.
+  - group: import
+    purpose: Import individual containers and files.
+  - group: job / gear
+    purpose: Run and manage analysis gears and jobs.
+  - group: copy / sync
+    purpose: Copy and synchronize files between local storage and Flywheel.
+notes: >-
+  Referred to in current docs as the legacy CLI (fw). Command surface captured
+  from the Flywheel CLI documentation; exact subcommands vary by platform version.
