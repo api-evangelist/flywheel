@@ -1,13 +1,13 @@
 generated: '2026-07-19'
 method: searched
 host: https://flywheel.io
-notes: >-
-  Probed the marketing/docs host on 2026-07-19. No /.well-known discovery
-  documents are published. The Flywheel REST API is served per customer instance
-  (<instance>/api) behind authentication and its Swagger UI lives at
-  <instance>/api/docs — not reachable at a public host — so no well-known
-  documents were harvested. Absence recorded as valid data.
-documents:
+notes: Probed the marketing/docs host on 2026-07-19. No /.well-known discovery documents are published.
+  The Flywheel REST API is served per customer instance (<instance>/api) behind authentication and its
+  Swagger UI lives at <instance>/api/docs — not reachable at a public host — so no well-known documents
+  were harvested. Absence recorded as valid data.
+hosts:
+- host: https://flywheel.io
+  documents:
   - path: /.well-known/security.txt
     status: 404
   - path: /.well-known/openid-configuration
@@ -18,3 +18,8 @@ documents:
     status: 404
   - path: /.well-known/ai-plugin.json
     status: 404
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
